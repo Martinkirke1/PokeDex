@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pokemon Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PokemonSearchViewController" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,20 +43,30 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="rRO-6v-K7Z" firstAttribute="top" secondItem="dbK-ML-7Ns" secondAttribute="bottom" constant="31" id="0HN-X1-duf"/>
+                            <constraint firstItem="pVS-sM-vAe" firstAttribute="centerX" secondItem="ChZ-bi-LiE" secondAttribute="centerX" id="1iV-Kh-6yj"/>
+                            <constraint firstItem="dbK-ML-7Ns" firstAttribute="trailing" secondItem="rRO-6v-K7Z" secondAttribute="trailing" id="8RT-d5-tke"/>
+                            <constraint firstItem="dbK-ML-7Ns" firstAttribute="leading" secondItem="rRO-6v-K7Z" secondAttribute="leading" id="Bx3-mH-stZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rRO-6v-K7Z" secondAttribute="bottom" constant="270" id="EzT-OG-AQk"/>
                             <constraint firstItem="ChZ-bi-LiE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="FEn-oZ-8i0"/>
                             <constraint firstAttribute="trailing" secondItem="ChZ-bi-LiE" secondAttribute="trailing" id="Nrl-uE-84J"/>
-                            <constraint firstItem="dbK-ML-7Ns" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O84-3i-J8p"/>
-                            <constraint firstItem="ChZ-bi-LiE" firstAttribute="centerX" secondItem="pVS-sM-vAe" secondAttribute="centerX" id="ab3-cq-DVe"/>
+                            <constraint firstItem="pVS-sM-vAe" firstAttribute="leading" secondItem="dbK-ML-7Ns" secondAttribute="leading" id="X2K-ST-Gz0"/>
                             <constraint firstItem="ChZ-bi-LiE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="edq-jU-ybh"/>
-                            <constraint firstItem="dbK-ML-7Ns" firstAttribute="top" secondItem="pVS-sM-vAe" secondAttribute="bottom" constant="32" id="h8z-Ih-Uyt"/>
-                            <constraint firstItem="dbK-ML-7Ns" firstAttribute="centerX" secondItem="rRO-6v-K7Z" secondAttribute="centerX" id="mnI-dN-d8h"/>
-                            <constraint firstItem="pVS-sM-vAe" firstAttribute="centerX" secondItem="dbK-ML-7Ns" secondAttribute="centerX" id="tF3-OC-bUa"/>
-                            <constraint firstItem="rRO-6v-K7Z" firstAttribute="top" secondItem="dbK-ML-7Ns" secondAttribute="bottom" constant="32" id="tbj-Pp-m2W"/>
+                            <constraint firstItem="pVS-sM-vAe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="ezw-Iv-vzW"/>
+                            <constraint firstItem="pVS-sM-vAe" firstAttribute="centerX" secondItem="dbK-ML-7Ns" secondAttribute="centerX" id="k9k-zg-W8G"/>
+                            <constraint firstItem="dbK-ML-7Ns" firstAttribute="top" secondItem="pVS-sM-vAe" secondAttribute="bottom" constant="32" id="kPN-mY-kqm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="rRO-6v-K7Z" id="Mzq-aQ-Bdh"/>
+                        <outlet property="idLabel" destination="dbK-ML-7Ns" id="4xj-i2-7px"/>
+                        <outlet property="nameLabel" destination="pVS-sM-vAe" id="yvf-Ni-0Jp"/>
+                        <outlet property="searchBar" destination="ChZ-bi-LiE" id="nxe-ua-TGN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
